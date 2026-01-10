@@ -1,33 +1,101 @@
-<span class="icon-text">
-  <span class="icon">
-    <i class="fas fa-home"></i>
-  </span>
-  <span>Accueil</span>
-<div class="columns">
-  <div class="column is-one-third">is-one-third</div>
-  <div class="column">Auto</div>
-  <div class="column">sdfg</div>
-</div>
-</span>
+<!DOCTYPE html>
+<html lang="FR">
+<body>
 
-<div class="column">
-    <p class="bd-notification is-danger">Second column</p>
-    <div class="columns is-mobile">
-      <div class="column is-half">
-        <p class="bd-notification is-danger">50%</p>
-      </div>
-      <div class="column">
-        <p class="bd-notification is-danger">Auto</p>
-      </div>
-      <div class="column">
-        <p class="bd-notification is-danger">
-        <h3>Mes langues</h3>
-            <progress class="progress" value="50" max="100">15%</progress>
-            <p>Mon niveau d'anglais</></p>
-	    <progress class="progress" value="50" max="100">75%</progress>
-	    <p>Mon niveau de coréen</></p>			
-        </p>
-      </div>
-    </div>
+<h1>Voici un site incroyable</h1>
+<p>J'aimerais vous pr&#233;senter <br> ce site incroyable  : <a href="https://www.google.com" title="Google" target="_blank">Cliquez ici</a>.</p>
+
+<hr>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
   </div>
+</nav>
+-->
+
+<pre>
+France ! &#244; belle contr&#233;e, &#244; terre g&#233;n&#233;reuse
+Que les dieux complaisants formaient pour &#234;tre heureuse,
+Tu ne sens point du Nord les gla&#231;antes horreurs ;
+Le Midi de ses feux t’&#233;pargne les fureurs ;
+[...]
+<em>Andr&#233; Ch&#233;nier</em>
+</pre>
+
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
 </div>
+
+<style>
+h1 {
+ background: linear-gradient(to bottom, #00ccff 0%, #ff99cc 100%);
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+</style>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+
+/*
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+*/
+</script>
+</body>
+
+<!-- Footer 
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <a href="https://www.w3schools.com/howto/howto_website_create_portfolio.asp">super lien pour cr&#233;er portfolio</a>
+</footer>
+-->
+
+<html>
