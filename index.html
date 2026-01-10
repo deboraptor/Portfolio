@@ -1,11 +1,15 @@
+<!-- tout le code est récolté sur W3Schools
+https://www.w3schools.com/howto/default.asp
+-->
+
 <!DOCTYPE html>
 <html lang="FR">
 <body>
 
+<!--
 <h1>Voici un site incroyable</h1>
 <p>J'aimerais vous pr&#233;senter <br> ce site incroyable  : <a href="https://www.google.com" title="Google" target="_blank">Cliquez ici</a>.</p>
-
-<hr>
+-->
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
@@ -21,6 +25,7 @@
 </nav>
 -->
 
+<!-- 
 <pre>
 France ! &#244; belle contr&#233;e, &#244; terre g&#233;n&#233;reuse
 Que les dieux complaisants formaient pour &#234;tre heureuse,
@@ -29,26 +34,54 @@ Le Midi de ses feux t’&#233;pargne les fureurs ;
 [...]
 <em>Andr&#233; Ch&#233;nier</em>
 </pre>
+-->
 
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<!--
 <div class="container" onclick="myFunction(this)">
   <div class="bar1"></div>
   <div class="bar2"></div>
   <div class="bar3"></div>
 </div>
 
-<!-- Load an icon library -->
+<!-- Load an icon library 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- The sidebar -->
+<!-- The sidebar 
 <div class="sidebar">
   <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
   <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
   <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
   <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
 </div>
+-->
 
 <div class="footer">
-    <!-- ajouter les img/logo des réseaux sociaux -->
+    <!-- ajouter les img/logo des réseaux sociaux-->
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
     <a href="https://www.w3schools.com/howto/howto_website_create_portfolio.asp">super lien pour cr&#233;er portfolio</a>
 </div>
@@ -73,7 +106,44 @@ h1 {
   cursor: pointer;
 }
 
-/* Style the sidebar - fixed full height */
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
+/* Style the sidebar - fixed full height
 .sidebar {
   height: 100%;
   width: 160px;
@@ -86,7 +156,7 @@ h1 {
   padding-top: 16px;
 }
 
-/* Style sidebar links */
+/* Style sidebar links 
 .sidebar a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -95,16 +165,17 @@ h1 {
   display: block;
 }
 
-/* Style links on mouse-over */
+/* Style links on mouse-over 
 .sidebar a:hover {
   color: #f1f1f1;
 }
 
-/* Style the main content */
+/* Style the main content 
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 160px; 
   padding: 0px 10px;
 }
+*/
 
 /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
 @media screen and (max-height: 450px) {
@@ -138,6 +209,30 @@ h1 {
 function myFunction(x) {
   x.classList.toggle("change");
 }
+
+function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 /*
 function openNav() {
