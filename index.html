@@ -6,79 +6,23 @@ https://www.w3schools.com/howto/default.asp
 <meta charset="UTF-8">
 <body>
 
-<!--
-<h1>Voici un site incroyable</h1>
-<p>J'aimerais vous pr&#233;senter <br> ce site incroyable  : <a href="https://www.google.com" title="Google" target="_blank">Cliquez ici</a>.</p>
--->
+<!-- Curtain menu -->
+<div id="myNav" class="overlay">
 
-<!-- Hidden Sidebar (reveals when clicked on menu icon)
-<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-    <i class="fa fa-remove"></i>
-  </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
-    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
   </div>
-</nav>
--->
-
-<!-- 
-<pre>
-France ! &#244; belle contr&#233;e, &#244; terre g&#233;n&#233;reuse
-Que les dieux complaisants formaient pour &#234;tre heureuse,
-Tu ne sens point du Nord les gla&#231;antes horreurs ;
-Le Midi de ses feux t’&#233;pargne les fureurs ;
-[...]
-<em>Andr&#233; Ch&#233;nier</em>
-</pre>
--->
-
-<button class="tablink" onclick="openPage('Home', this, 'LightPink')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'LightSkyBlue')">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'LightGreen')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'LightSalmon')">About</button>
-
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p>
-</div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
-</div>
-
-<!--
-<div class="container" onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
-
-<!-- Load an icon library 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- The sidebar 
-<div class="sidebar">
-  <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
-  <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
-  <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-</div>
--->
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()">open</span>
 
 <div class="footer" style="margin:-24px">
     <i class="github"></i>
@@ -102,150 +46,56 @@ h1 {
   text-align: center;
 }
 
-.container {
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* Set height of body and the document to 100% to enable "full page tabs" */
-body, html {
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
   height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
-
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Home {background-color: LightPink;}
-#News {background-color: LightSkyBlue;}
-#Contact {background-color: LightGreen;}
-#About {background-color: LightSalmon;}
-
-/* Style the sidebar - fixed full height
-.sidebar {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 16px;
+  top: 0;
+  background-color: rgb(135, 118, 162); /* Black fallback color */
+  background-color: rgba(135, 118, 162, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-/* Style sidebar links 
-.sidebar a {
-  padding: 6px 8px 6px 16px;
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
   text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
+  font-size: 36px;
+  color: #efc7f4;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-/* Style links on mouse-over 
-.sidebar a:hover {
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
-}
-
-/* Style the main content 
-.main {
-  margin-left: 160px; 
-  padding: 0px 10px;
-}
-*/
-
-/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-/* Rotate first bar */
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-/* Fade out the second bar */
-.change .bar2 {opacity: 0;}
-
-/* Rotate last bar */
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
 }
 </style>
 
 <script>
-function myFunction(x) {
-  x.classList.toggle("change");
-}
-
-function openPage(pageName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-/*
+/* Open when someone clicks on the span element */
 function openNav() {
-  document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myNav").style.width = "100%";
 }
 
+/* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myNav").style.width = "0%";
 }
-*/
 </script>
 </body>
-
 <html>
