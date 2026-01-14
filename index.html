@@ -6,32 +6,37 @@ https://www.w3schools.com/howto/default.asp
 <meta charset="UTF-8">
 <body>
 
-<!-- Curtain menu -->
-<div id="myNav" class="overlay">
+  <!-- Curtain menu -->
+  <div id="myNav" class="overlay">
 
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn"
+      onclick="closeNav()">&times;</a>
 
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
   </div>
-</div>
 
-<!-- Use any element to open/show the overlay navigation menu -->
-<span onclick="openNav()">open</span>
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <span onclick="openNav()">open</span>
 
-<div class="footer" style="margin:-24px">
+  <div class="footer" style="margin:-24px">
     <i class="github"></i>
     <i class="linkedin"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    <a href="https://www.w3schools.com/howto/howto_website_create_portfolio.asp">super lien pour cr&#233;er portfolio</a>
-</div>
+    <p class="w3-medium">Powered by <a
+        href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+    <a
+      href="https://www.w3schools.com/howto/howto_website_create_portfolio.asp">super
+      lien pour cr&#233;er portfolio</a>
+  </div>
 
-<style>
+  <style>
 h1 {
  background: linear-gradient(to bottom, #00ccff 0%, #ff99cc 100%);
 }
@@ -86,7 +91,7 @@ h1 {
 }
 </style>
 
-<script>
+  <script>
 /* Open when someone clicks on the span element */
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
