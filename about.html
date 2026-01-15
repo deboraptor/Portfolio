@@ -1,9 +1,78 @@
+<!-- TODO: ajouter animation de papillon qui vole quand 
+on clique sur un bouton -->
 <!DOCTYPE html>
 <html>
-<title>About Me</title>
-<meta charset="UTF-8">
-<body>
-    <h1>About Me</h1>
-    <p>This is the about page of my portfolio.</p>
-</body>
+    <title>About Me</title>
+    <meta charset="UTF-8">
+    <body>
+        <header>
+            <h1>About Me</h1>
+            <br>
+            <br>
+        </header>
+        <div id="cadre" class="flex-container">
+            <br>
+            <section class="content">
+                <p>This is the about page of my portfolio.</p>
+                <a href="mailto:vdzdebora@gmail.com">Envoyer un email</a>
+                <br> <!-- TODO: améliorer ? -->
+                <br>
+                <a href="https://www.linkedin.com/in/debora-van-den-zande/">
+                    <img border="0" title="Mon profil LinkedIn"
+                        alt="Mon profil LinkedIn" src="linkedin.png" width="100"
+                        height="100">
+                </a>
+                <a href="https://github.com/deboraptor">
+                    <img border="0" title="Mon profil GitHub"
+                        alt="Mon profil Github" src="github.png" width="100"
+                        height="100">
+                </a>
+            </section>
+        </div>
+    </body>
+    <style>
+body {
+    margin: 50px;
+}
+
+h1 {
+    background: linear-gradient(to bottom, #00ccff 0%, #ff99cc 100%);
+}
+
+div#cadre {
+    background-image: url(cadre2.png);
+    max-height:100%; 
+    max-width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* https://stackoverflow.com/questions/1709442/make-divs-height-expand-with-its-content */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+section.content {
+    flex: 1;
+}
+
+html {
+    background-image: url('picnicPattern.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+    <script>
+        /* TODO: revoir, ça marche po trop */
+        var largeur = frame.innerWidth;
+        var hauteur = frame.innerHeight;
+        document.getElementById("cadre").style.width = (largeur) + "px";
+        document.getElementById("cadre").style.height = (hauteur) + "px";
+    </script>
 </html>
