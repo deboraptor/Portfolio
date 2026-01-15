@@ -3,6 +3,8 @@ https://www.w3schools.com/howto/default.asp
 -->
 
 <!-- TODO: ajouter animation JS avec chat ? -->
+<!-- TODO: ajouter animation de papillon qui vole quand 
+on clique sur un bouton -->
 <!DOCTYPE html>
 <html>
   <title>Mon Portfolio</title>
@@ -120,6 +122,19 @@ function openNav() {
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
+}
+
+/* lance un papillon quand on clique */
+function flyButterfly() {
+  var imagejavascript = document.createElement("img");
+  imagejavascript.src = "butterfly.gif";
+  document.body.appendChild(imagejavascript)
+}
+
+if (openNav()) {
+    flyButterfly();
+} else if (closeNav()) {
+    document.getElementById("myNav").removeEventListener("click", flyButterfly);
 }
 </script>
   </body>
