@@ -2,45 +2,61 @@
 https://www.w3schools.com/howto/default.asp
 -->
 
+<!-- TODO: ajouter animation JS avec chat ? -->
 <!DOCTYPE html>
 <html>
-<title>Mon Portfolio</title>
-<meta charset="UTF-8">
-<body>
-  <!-- _blank ouvre un nouvel onglet -->
-  <p><a href="about.html" target="_blank">about me</a></p>
+  <title>Mon Portfolio</title>
+  <meta charset="UTF-8">
+  <body>
+    <!-- TODO: J'aimerais essayer image map pour cliquer sur un truc -->
+    <img class="center-fit" src="banner.png" alt="banner">
+    <!-- _blank ouvre un nouvel onglet -->
+    <h1><a href="about.html" target="_blank">About me</a></h1>
 
-  <!-- Curtain menu -->
-  <div id="myNav" class="overlay">
+    <!-- Curtain menu -->
+    <div id="myNav" class="overlay">
 
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn"
-      onclick="closeNav()">&times;</a>
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn"
+        onclick="closeNav()">&times;</a>
 
-    <!-- Overlay content -->
-    <div class="overlay-content">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Use any element to open/show the overlay navigation menu -->
-  <span onclick="openNav()">open</span>
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <span onclick="openNav()">Open Nav Bar</span>
 
-  <div class="footer" style="margin:-24px">
-    <i class="github"></i>
-    <i class="linkedin"></i>
-    <p class="w3-medium">Powered by <a
-        href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-        class="w3-hover-text-green">w3.css</a></p>
-    <a
-      href="https://www.w3schools.com/howto/howto_website_create_portfolio.asp">super
-      lien pour cr&#233;er portfolio</a>
-  </div>
+    <div class="footer" style="margin:-24px">
+      <p class="w3-medium">Powered by <a
+          href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          class="w3-hover-text-green">w3.css</a></p>
+      <a
+        href="https://www.w3schools.com/howto/howto_website_create_portfolio.asp">super
+        lien pour cr&#233;er portfolio</a>
+    </div>
 
-  <style>
+    <style>
+/* dynamically center and resize the image to fit the window */
+* {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+
 h1 {
  background: linear-gradient(to bottom, #00ccff 0%, #ff99cc 100%);
 }
@@ -95,7 +111,7 @@ h1 {
 }
 </style>
 
-  <script>
+    <script>
 /* Open when someone clicks on the span element */
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
@@ -106,5 +122,5 @@ function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
 </script>
-</body>
-<html>
+  </body>
+  <html>
