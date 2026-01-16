@@ -7,9 +7,9 @@ $.fn.center = function () {
   return this;
 }
 
-$("#summonPokemon").on("click", function(){
-  $("#pokemon").fadeIn().center();
+$("#summonGif").on("click", function(){
+  $("#gif").fadeIn().center();
   setTimeout(function(){
-    $("#pokemon").fadeOut()
+    $("#gif").fadeOut()
   }, 1000);
 });
