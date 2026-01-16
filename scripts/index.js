@@ -11,7 +11,7 @@ function closeNav() {
 /* lance un papillon quand on clique */
 function flyButterfly() {
   var imagejavascript = document.createElement("img");
-  imagejavascript.src = "butterfly.gif";
+  imagejavascript.src = "images/butterfly.gif";
   document.body.appendChild(imagejavascript)
 }
 
