@@ -9,6 +9,7 @@ on clique sur un bouton -->
 <html>
   <title>Mon Portfolio</title>
   <meta charset="UTF-8">
+  <script src="index.js"></script>
   <body>
     <!-- TODO: J'aimerais essayer image map pour cliquer sur un truc -->
     <img class="center-fit" src="banner.png" alt="banner">
@@ -111,31 +112,6 @@ h1 {
 .overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
 }
-</style>
-
-    <script>
-/* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
-/* lance un papillon quand on clique */
-function flyButterfly() {
-  var imagejavascript = document.createElement("img");
-  imagejavascript.src = "butterfly.gif";
-  document.body.appendChild(imagejavascript)
-}
-
-if (openNav()) {
-    flyButterfly();
-} else if (closeNav()) {
-    document.getElementById("myNav").removeEventListener("click", flyButterfly);
-}
-</script>
+  </style>
   </body>
-  <html>
+</html>
