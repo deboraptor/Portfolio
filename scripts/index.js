@@ -1,22 +1,15 @@
-/* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+/* https://www.sitepoint.com/community/t/show-a-gif-on-button-click-then-hide-it/43049/9 */
+
+$.fn.center = function () {
+  this.css("position","absolute");
+  this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+  this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+  return this;
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
-/* lance un papillon quand on clique */
-function flyButterfly() {
-  var imagejavascript = document.createElement("img");
-  imagejavascript.src = "images/butterfly.gif";
-  document.body.appendChild(imagejavascript)
-}
-
-if (openNav()) {
-    flyButterfly();
-} else if (closeNav()) {
-    document.getElementById("myNav").removeEventListener("click", flyButterfly);
-}
+$("#summonPokemon").on("click", function(){
+  $("#pokemon").fadeIn().center();
+  setTimeout(function(){
+    $("#pokemon").fadeOut()
+  }, 1000);
+});
