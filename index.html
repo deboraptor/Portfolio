@@ -3,8 +3,6 @@ https://www.w3schools.com/howto/default.asp
 -->
 
 <!-- TODO: ajouter animation JS avec chat ? -->
-<!-- TODO: ajouter animation de papillon qui vole quand 
-on clique sur un bouton -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,17 +13,12 @@ on clique sur un bouton -->
   <body>
     <!-- TODO: J'aimerais essayer image map pour cliquer sur un truc -->
     <img class="center-fit" src="images/banner.png" alt="banner">
-    <!-- _blank ouvre un nouvel onglet -->
-    <h1><a href="about.html" target="_blank">About me</a></h1>
+    
+    <h1><a href="about.html" target="_blank">About me</a></h1> <!-- _blank ouvre un nouvel onglet -->
 
-    <!-- Curtain menu -->
     <div id="myNav" class="overlay">
-
-      <!-- Button to close the overlay navigation -->
       <a href="javascript:void(0)" class="closebtn"
         onclick="closeNav()">&times;</a>
-
-      <!-- Overlay content -->
       <div class="overlay-content">
         <a href="#">About</a>
         <a href="#">Services</a>
@@ -33,19 +26,19 @@ on clique sur un bouton -->
         <a href="#">Contact</a>
       </div>
     </div>
-
-    <!-- Use any element to open/show the overlay navigation menu -->
     <span onclick="openNav()">Open Nav Bar</span>
-
+    <!-- TODO: réparer c'est cassé (probab desync JS)-->
     <br>
 
     <button id="summonGif">Bouton</button>
     <!-- TODO: voir pour changer, si ça s'affiche toujours mal -->
+    <!-- l'image reste bloquée à la fin et se relance jamais -->
     <img src="images/butterfly.gif" class="hidden" id="gif">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="scripts/index.js"></script>
 
     <div class="footer" style="margin:-24px">
+      <!-- TODO: modifier la taille, c'est coupé -->
       <p class="w3-medium">Powered by <a
           href="https://www.w3schools.com/w3css/default.asp" target="_blank"
           class="w3-hover-text-green">w3.css</a></p>
