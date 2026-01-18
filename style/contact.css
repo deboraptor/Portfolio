@@ -1,29 +1,10 @@
-body {
-    margin: 50px;
-}
-
-h1 {
-    background: linear-gradient(to bottom, #00ccff 0%, #ff99cc 100%);
-}
-
-/* https://stackoverflow.com/questions/1709442/make-divs-height-expand-with-its-content */
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-section.content {
-    flex: 1;
-}
-
-html {
-    background-image: url("images/picnicPattern.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+div#cadre {
+    background-image: url("images/cadre2.png");
+    max-height:100%; 
+    max-width:100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
 }
 
 

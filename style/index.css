@@ -69,3 +69,38 @@ h1 {
 .overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
 }
+
+/* nav bar */
+/* https://www.w3schools.com/css/css_navbar_horizontal.asp */
+/* Tester :
+-> le sticky en dessous de la bannière mais qui descend au scroll
+-> les couleurs, quand fenêtre active c'est rose
+-> about sur la droite
+*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #ff88a4; /* light pink = #ffc3d1 */
+}
+
+/* TODO: marche pas */
+ul li a.active {
+  background-color: #ff88a4;
+}
