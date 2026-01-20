@@ -3,7 +3,8 @@
     <head>
         <title>About Me - Mon Portfolio</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style/about.css">
+        <link rel="stylesheet" href="style/projects.css">
+        <!-- TODO: changer les noms des classes, à voir plus tard avec le css imbitable-->
         <link rel="stylesheet" href="https://actustream.fr/css/style.css?v=7.4.2">
     </head>
     <body>
@@ -20,10 +21,19 @@
 
     <h1>About Me</h1>
 
-    <script src="scripts/about.js"></script>
+    <script src="scripts/projects.js"></script>
 
     </div>
 
+    <!-- Control buttons -->
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('elec')"> Electronics</button>
+        <button class="btn" onclick="filterSelection('jewelry')"> Jewelry</button>
+        <button class="btn" onclick="filterSelection('crochet')"> Crochet</button>
+    </div>
+
+    <!-- TODO: ajouter un flitre de catégorie ? (classe streamer_news2) -->
     <!-- TODO: j'essaie de recréer le vignetage de ce site https://actustream.fr/streamers/zerator (actualité Zerator) -->
     <div class="container"> 
         <div> 
@@ -38,7 +48,7 @@
                                 </div>
                             </a>
                             <div class="info_last_news2">
-                                <span class="streamer_news2">elec</span>
+                                <span class="streamer_news2 fliterDiv elec">elec</span>
                                 <span class="date_news">date</span>
                                 <h3>description</h3>
                             </div>
@@ -51,7 +61,7 @@
                                 </div>
                             </a>
                             <div class="info_last_news2">
-                                <span class="streamer_news2">elec</span>
+                                <span class="streamer_news2 jewelry">jewelry</span>
                                 <span class="date_news">date</span>
                                 <h3>description</h3>
                             </div>
@@ -64,7 +74,7 @@
                                 </div>
                             </a>
                             <div class="info_last_news2">
-                                <span class="streamer_news2">elec</span>
+                                <span class="streamer_news2 fliterDiv crochet">crochet</span>
                                 <span class="date_news">date</span>
                                 <h3>description</h3>
                             </div>
@@ -77,7 +87,7 @@
                                 </div>
                             </a>
                             <div class="info_last_news2">
-                                <span class="streamer_news2">elec</span>
+                                <span class="streamer_news2 fliterDiv elec">elec</span>
                                 <span class="date_news">date</span>
                                 <h3>description</h3>
                             </div>
@@ -90,7 +100,7 @@
                                 </div>
                             </a>
                             <div class="info_last_news2">
-                                <span class="streamer_news2">elec</span>
+                                <span class="streamer_news2 fliterDiv crochet">crochet</span>
                                 <span class="date_news">date</span>
                                 <h3>description</h3>
                             </div>
